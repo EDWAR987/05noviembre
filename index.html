@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087fbd">
+  <title>Para Angie, mi princesita 💙</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="stars"></div>
+  <div id="hearts"></div>
+
+  <audio id="musica" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <header>
+    <div class="logo">💙 PARA MI PRINCESITA</div>
+    <div class="header-date">05 · NOVIEMBRE · 2026</div>
+  </header>
+
+  <main>
+
+    <!-- BIENVENIDA -->
+    <section class="hero" id="inicio">
+
+      <div class="hero-glow"></div>
+
+      <div class="badge">✦ UN DÍA MUY ESPECIAL ✦</div>
+
+      <div class="ball">⚽</div>
+
+      <p class="small-title">CON TODO MI CARIÑO PARA TI</p>
+
+      <h1>
+        Feliz Día de la Novia
+        <span>Angie, mi princesita 💙</span>
+      </h1>
+
+      <p class="intro">
+        Hoy es un día especial y no quería dejarlo pasar
+        sin prepararte una pequeña sorpresa.
+        Esta página es solamente para ti, mi princesa.
+      </p>
+
+      <button class="main-button" onclick="comenzar()">
+        Descubrir mi sorpresa 💙
+      </button>
+
+      <div class="date-box">
+        <strong>05</strong>
+        <div>
+          <span>NOVIEMBRE</span>
+          <small>Un día para celebrar tu amor</small>
+        </div>
+      </div>
+
+      <div class="scroll-hint">DESLIZA HACIA ABAJO ↓</div>
+
+    </section>
+
+    <!-- DEDICATORIA -->
+    <section class="section dedication" id="dedicatoria">
+
+      <span class="section-label">PARA LA DUEÑA DE MI CORAZÓN</span>
+
+      <h2>Angie, eres <span>única</span></h2>
+
+      <p class="description">
+        Si pudiera elegir nuevamente a una persona para
+        llenar mis días de felicidad, volvería a elegirte a ti.
+        Porque tienes algo que hace especial hasta los días
+        más sencillos.
+      </p>
+
+      <div class="love-card">
+        <div class="card-heart">💙</div>
+        <h3>Mi princesita</h3>
+        <p>
+          Nunca olvides lo valiosa, hermosa y especial
+          que eres. Mereces sonrisas, amor y muchos
+          momentos bonitos.
+        </p>
+        <span>Con mucho cariño para ti ✨</span>
+      </div>
+
+    </section>
+
+    <!-- FOTOGRAFÍAS -->
+    <section class="section memories" id="recuerdos">
+
+      <span class="section-label">PEQUEÑOS MOMENTOS</span>
+
+      <h2>Una princesa <span>especial</span></h2>
+
+      <p class="description">
+        Algunas fotografías de la persona que hace
+        más bonito mi mundo.
+      </p>
+
+      <div class="gallery">
+
+        <div class="photo">
+          <img src="fotos/foto1.jpg" alt="Angie">
+          <p>Mi princesita 💙</p>
+        </div>
+
+        <div class="photo">
+          <img src="fotos/foto2.jpg" alt="Angie">
+          <p>Mi sonrisa favorita ✨</p>
+        </div>
+
+        <div class="photo">
+          <img src="fotos/foto3.jpg" alt="Angie">
+          <p>Mi persona especial 🥰</p>
+        </div>
+
+        <div class="photo">
+          <img src="fotos/foto4.jpg" alt="Angie">
+          <p>Un recuerdo bonito 💕</p>
+        </div>
+
+        <div class="photo">
+          <img src="fotos/foto5.jpg" alt="Angie">
+          <p>Siempre tan hermosa 💙</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- JUEGO -->
+    <section class="section game" id="juego">
+
+      <span class="section-label">UNA PEQUEÑA SORPRESA</span>
+
+      <h2>Atrapa mis <span>corazones</span></h2>
+
+      <p class="description">
+        Mi princesita, atrapa los cinco corazones
+        para descubrir un mensajito especial.
+      </p>
+
+      <div class="score">
+        💙 Corazones: <strong id="score">0</strong> / 5
+      </div>
+
+      <div class="game-area" id="gameArea">
+
+        <button class="heart-button" onclick="atrapar(this)">💙</button>
+        <button class="heart-button" onclick="atrapar(this)">💙</button>
+        <button class="heart-button" onclick="atrapar(this)">💙</button>
+        <button class="heart-button" onclick="atrapar(this)">💙</button>
+        <button class="heart-button" onclick="atrapar(this)">💙</button>
+
+      </div>
+
+      <p id="gameMessage">¡Vamos, mi princesita! 💙</p>
+
+    </section>
+
+    <!-- CARTA -->
+    <section class="section letter-section" id="carta">
+
+      <div class="envelope">💌</div>
+
+      <span class="section-label">UNAS PALABRAS PARA TI</span>
+
+      <h2>Una carta para <span>Angie</span></h2>
+
+      <p class="description">
+        Hay cosas que a veces no se pueden explicar
+        con una simple palabra.
+      </p>
+
+      <button class="main-button" onclick="abrirCarta()" id="letterButton">
+        Abrir mi cartita 💙
+      </button>
+
+      <div class="letter" id="letter">
+
+        <h3>Para mi querida Angie 💙</h3>
+
+        <p>
+          Mi princesita, hoy 05 de noviembre quiero
+          desearte un feliz Día de la Novia.
+        </p>
+
+        <p>
+          Quiero que sepas lo especial que eres para mí.
+          Tu sonrisa, tu forma de ser y cada pequeño
+          detalle tuyo hacen que tengas un lugar muy
+          bonito en mi corazón.
+        </p>
+
+        <p>
+          No existe un regalo que pueda expresar
+          completamente todo el cariño que siento por ti,
+          pero preparé esta pequeña página para que
+          recuerdes lo importante que eres.
+        </p>
+
+        <p>
+          Así como el celeste siempre tendrá un lugar
+          especial en mi corazón, tú tienes un lugar
+          que nadie más puede ocupar.
+        </p>
+
+        <p>
+          Quiero verte feliz, cumplir tus sueños,
+          compartir sonrisas y seguir creando
+          momentos bonitos contigo.
+        </p>
+
+        <h3>¡Feliz Día de la Novia, mi princesita! 💙</h3>
+
+        <p class="signature">
+          Con muchísimo cariño, para ti. ❤️
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- FINAL -->
+    <section class="final-section">
+
+      <div class="final-heart">💙</div>
+
+      <span class="section-label">PARA SIEMPRE ESPECIAL</span>
+
+      <h2>
+        Mi mayor felicidad
+        <span>es verte sonreír.</span>
+      </h2>
+
+      <p>
+        Angie, mi princesita, nunca dejes de brillar.
+      </p>
+
+      <div class="final-line">
+        FELIZ DÍA DE LA NOVIA · 05.11.2026
+      </div>
+
+      <div class="crystal">CELESTE HASTA EL FINAL ⚽💙</div>
+
+      <button class="main-button" onclick="reiniciar()">
+        Volver a ver mi sorpresa ↻
+      </button>
+
+    </section>
+
+  </main>
+
+  <!-- REPRODUCTOR -->
+  <div class="music-player">
+
+    <button id="musicButton" onclick="controlarMusica()">
+      ▶
+    </button>
+
+    <div class="music-info">
+      <strong>Una canción para Angie</strong>
+      <span>Con cariño, mi princesita 💙</span>
+    </div>
+
+    <div class="music-note">♫</div>
+
+  </div>
+
+  <footer>
+    Hecho con mucho cariño para Angie 💙
+    <br>
+    05 de noviembre de 2026
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,621 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --sky: #55c7f5;
+  --blue: #0878bd;
+  --deep: #052c50;
+  --white: #ffffff;
+  --pale: #eaf8ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--pale);
+  color: var(--deep);
+  overflow-x: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 22px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 20;
+  background: #052e5060;
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.header-date {
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 145px 20px 90px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background:
+    radial-gradient(circle at 15% 20%, #9ae3ff80, transparent 30%),
+    radial-gradient(circle at 85% 70%, #83d9ff80, transparent 35%),
+    linear-gradient(145deg, #042e59, #087cbd 55%, #69d5ff);
+}
+
+.hero-glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: #80dfff30;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: glow 5s infinite alternate;
+}
+
+.badge {
+  position: relative;
+  border: 1px solid #ffffff80;
+  border-radius: 30px;
+  padding: 10px 22px;
+  font-size: 10px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.ball {
+  position: relative;
+  font-size: 65px;
+  margin: 12px;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 10px 15px #002e5b80);
+}
+
+.small-title {
+  font-size: 10px;
+  letter-spacing: 5px;
+  margin-bottom: 18px;
+  color: #d1f3ff;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+.hero h1 {
+  position: relative;
+  font-size: clamp(35px, 7vw, 72px);
+  line-height: 1.2;
+  max-width: 850px;
+}
+
+.hero h1 span {
+  display: block;
+  color: #c4f0ff;
+  margin-top: 10px;
+}
+
+.intro {
+  position: relative;
+  max-width: 530px;
+  margin: 25px auto 30px;
+  color: #e0f6ff;
+  line-height: 2;
+  font-size: 14px;
+}
+
+.main-button {
+  position: relative;
+  border: 0;
+  padding: 15px 27px;
+  border-radius: 40px;
+  background: white;
+  color: #0878bd;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px #002c5b40;
+  transition: .3s;
+}
+
+.main-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px #002c5b70;
+}
+
+.date-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 45px;
+  text-align: left;
+}
+
+.date-box strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 65px;
+}
+
+.date-box span, .date-box small {
+  display: block;
+}
+
+.date-box span {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.date-box small {
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 25px;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #d8f5ff;
+  animation: float 2s infinite;
+}
+
+.section {
+  padding: 110px 7%;
+  text-align: center;
+}
+
+.section-label {
+  display: block;
+  color: #299ed1;
+  font-size: 10px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: clamp(34px, 5vw, 52px);
+  color: #07558b;
+}
+
+.section h2 span {
+  color: #36b9ed;
+}
+
+.description {
+  max-width: 580px;
+  margin: 20px auto 40px;
+  font-size: 14px;
+  line-height: 2;
+  color: #69859a;
+}
+
+.love-card {
+  max-width: 450px;
+  margin: auto;
+  padding: 40px 30px;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #ffffff, #dff5ff);
+  box-shadow: 0 20px 50px #0878bd18;
+  transition: .4s;
+}
+
+.love-card:hover {
+  transform: translateY(-8px);
+}
+
+.card-heart {
+  font-size: 55px;
+  animation: heartbeat 1.5s infinite;
+}
+
+.love-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: #0878bd;
+  font-size: 27px;
+  margin: 15px;
+}
+
+.love-card p {
+  color: #69859a;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.love-card span {
+  display: block;
+  margin-top: 20px;
+  font-size: 11px;
+  color: #299ed1;
+}
+
+.memories {
+  background: linear-gradient(180deg, #eaf8ff, #d5f0ff);
+}
+
+.gallery {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.photo {
+  padding: 10px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px #07558b15;
+  transition: .35s;
+  overflow: hidden;
+}
+
+.photo:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.photo img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 13px;
+  display: block;
+}
+
+.photo p {
+  padding: 16px 5px 9px;
+  color: #0878bd;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.game {
+  background: linear-gradient(135deg, #bceaff, #e7f8ff);
+}
+
+.score {
+  margin: 25px;
+  font-size: 15px;
+  color: #0878bd;
+}
+
+.game-area {
+  max-width: 600px;
+  min-height: 150px;
+  margin: auto;
+  padding: 20px;
+  border: 2px dashed #63c8f0;
+  border-radius: 25px;
+  background: #ffffffa8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.heart-button {
+  padding: 10px;
+  border: 0;
+  background: transparent;
+  font-size: 32px;
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: none;
+}
+
+.heart-button:hover {
+  transform: scale(1.4) rotate(12deg);
+}
+
+.heart-button:disabled {
+  cursor: default;
+}
+
+#gameMessage {
+  margin-top: 25px;
+  color: #0878bd;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.letter-section {
+  background: #f4fbff;
+}
+
+.envelope {
+  font-size: 70px;
+  margin-bottom: 20px;
+  animation: float 3s infinite;
+}
+
+.letter {
+  display: none;
+  max-width: 680px;
+  margin: 40px auto 0;
+  padding: 40px;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 20px 50px #07558b20;
+  text-align: left;
+  line-height: 2;
+  animation: appear .8s ease;
+}
+
+.letter h3 {
+  font-family: 'Playfair Display', serif;
+  color: #0787c5;
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.letter p {
+  font-size: 14px;
+  color: #59758a;
+  margin: 15px 0;
+}
+
+.letter .signature {
+  text-align: right;
+  font-weight: 700;
+  color: #0878bd;
+}
+
+.final-section {
+  padding: 110px 20px;
+  background: linear-gradient(145deg, #042b52, #0878bd, #57c8f4);
+  text-align: center;
+  color: white;
+}
+
+.final-heart {
+  font-size: 90px;
+  margin-bottom: 20px;
+  animation: heartbeat 1.5s infinite;
+}
+
+.final-section .section-label {
+  color: #c6efff;
+}
+
+.final-section h2 {
+  max-width: 750px;
+  margin: auto;
+  font-size: clamp(36px, 6vw, 65px);
+  line-height: 1.3;
+}
+
+.final-section h2 span {
+  display: block;
+  color: #b9edff;
+}
+
+.final-section p {
+  margin: 25px 0;
+  font-size: 14px;
+}
+
+.final-line {
+  margin: 35px 0 15px;
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.crystal {
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 20px 0 35px;
+  font-size: 12px;
+}
+
+footer {
+  background: #04233e;
+  color: #bceaff;
+  text-align: center;
+  padding: 25px;
+  line-height: 2;
+  font-size: 11px;
+}
+
+/* REPRODUCTOR DE MÚSICA */
+
+.music-player {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 17px;
+  background: #ffffffed;
+  backdrop-filter: blur(15px);
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  box-shadow: 0 8px 30px #00345b30;
+}
+
+.music-player button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0878bd, #54c7f4);
+  color: white;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.music-info strong, .music-info span {
+  display: block;
+}
+
+.music-info strong {
+  color: #07558b;
+  font-size: 11px;
+}
+
+.music-info span {
+  color: #6e8ba0;
+  font-size: 9px;
+  margin-top: 3px;
+}
+
+.music-note {
+  color: #36b9ed;
+  font-size: 22px;
+  animation: musicMove 1s infinite alternate;
+}
+
+/* DECORACIÓN */
+
+#stars, #hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.star {
+  position: absolute;
+  color: white;
+  animation: twinkle 3s infinite;
+}
+
+.floating-heart {
+  position: absolute;
+  bottom: -40px;
+  animation: rise 8s linear forwards;
+  opacity: .8;
+}
+
+@keyframes float {
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes heartbeat {
+  50% { transform: scale(1.17); }
+}
+
+@keyframes glow {
+  to { transform: scale(1.5); opacity: .5; }
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes twinkle {
+  50% { opacity: .2; transform: scale(.6); }
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(-110vh) rotate(35deg);
+    opacity: 0;
+  }
+}
+
+@keyframes musicMove {
+  to { transform: translateY(-4px) rotate(15deg); }
+}
+
+/* CELULARES */
+
+@media(max-width: 650px) {
+
+  header {
+    padding: 17px 5%;
+  }
+
+  .logo {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .header-date {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .hero {
+    padding-top: 125px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .intro {
+    font-size: 12px;
+  }
+
+  .section {
+    padding: 80px 6%;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    max-width: 370px;
+  }
+
+  .photo img {
+    height: 330px;
+  }
+
+  .letter {
+    padding: 25px;
+  }
+
+  .letter p {
+    font-size: 13px;
+  }
+
+  .music-player {
+    left: 10px;
+    bottom: 10px;
+    padding: 9px 12px;
+  }
+
+  .music-info strong {
+    font-size: 10px;
+  }
+
+  .music-info span {
+    font-size: 8px;
+  }
+
+  .final-section {
+    padding: 85px 20px;
+  }
+}
